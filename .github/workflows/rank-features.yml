@@ -33,7 +33,6 @@ jobs:
         with:
           # Specify Bun version if needed, otherwise uses latest
           # bun-version: latest
-          pass
 
       - name: Install Dependencies
         # Only need octokit for the script
