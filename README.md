@@ -34,18 +34,16 @@ The action will generate a file (e.g., `RANKED_FEATURES.md`) that looks somethin
 
 Here's a static example of what the generated Markdown content looks like:
 
-
 ### ✨ Top Feature Requests (your-owner/your-repo)
 
 *Updated: 2025-05-05T15:00:00.000Z*
 
-| Rank | 👍  | Feature Request                         | Issue                                                                          |
-| :--- | :-: | :-------------------------------------- | :----------------------------------------------------------------------------- |
-| 1    | 42  | Add dark mode support                   | [your-owner/your-repo#123](https://github.com/your-owner/your-repo/issues/123) |
-| 2    | 25  | Integrate with Service X                | [your-owner/your-repo#456](https://github.com/your-owner/your-repo/issues/456) |
-| 3    | 18  | Improve performance \| Optimize queries | [your-owner/your-repo#789](https://github.com/your-owner/your-repo/issues/789) |
-| 4    | 5   | Add option for exporting data           | [your-owner/your-repo#101](https://github.com/your-owner/your-repo/issues/101) |
-
+| Rank | 👍 | Feature Request                         | Issue                                                                          |
+|:-----|:--:|:----------------------------------------|:-------------------------------------------------------------------------------|
+| 1    | 42 | Add dark mode support                   | [your-owner/your-repo#123](https://github.com/your-owner/your-repo/issues/123) |
+| 2    | 25 | Integrate with Service X                | [your-owner/your-repo#456](https://github.com/your-owner/your-repo/issues/456) |
+| 3    | 18 | Improve performance \| Optimize queries | [your-owner/your-repo#789](https://github.com/your-owner/your-repo/issues/789) |
+| 4    | 5  | Add option for exporting data           | [your-owner/your-repo#101](https://github.com/your-owner/your-repo/issues/101) |
 
 (Note: The actual file will contain the real data from your repository's issues.)
 
@@ -72,23 +70,26 @@ Setting this up in your repository is easy:
 5. **Customize (Optional):**
    Open *your* `.github/workflows/rank-features.yml` file and adjust the following settings if needed:
 
-* **Schedule:** Change the `cron` schedule under `on:` to run more or less frequently (
-  see [Cron Schedule Syntax](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule)).
-  Default is daily at midnight UTC.
-* **Label:** Change the `FEATURE_LABEL` environment variable under `env:` if you use a different label for feature
-  requests (e.g., `enhancement`).
-* **Output File:** Change the `OUTPUT_FILE` environment variable if you want to name the generated Markdown file
-  differently or place it elsewhere.
-* **Commit Branch:** By default, the action commits to your repository's default branch. If you want to commit to a
-  different branch (like `gh-pages`), add a `COMMIT_BRANCH` environment variable under `env:`.
-* **Commit Message:** Change the `COMMIT_MESSAGE` environment variable for a custom commit message.
+    * **Schedule:** The default schedule runs the action daily at midnight UTC. You can change the `cron` schedule under
+      `on:` to run more or less frequently.
+        * Default: `cron: '0 0 * * *'` (Daily at 00:00 UTC)
+        *
+        See [Cron Schedule Syntax](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows#schedule)
+        for more options.
+    * **Label:** Change the `FEATURE_LABEL` environment variable under `env:` if you use a different label for feature
+      requests (e.g., `enhancement`).
+    * **Output File:** Change the `OUTPUT_FILE` environment variable if you want to name the generated Markdown file
+      differently or place it elsewhere.
+    * **Commit Branch:** By default, the action commits to your repository's default branch. If you want to commit to a
+      different branch (like `gh-pages`), add a `COMMIT_BRANCH` environment variable under `env:`.
+    * **Commit Message:** Change the `COMMIT_MESSAGE` environment variable for a custom commit message.
 
 6. **Commit & Push:**
    Commit these two new files (`.github/workflows/rank-features.yml` and `.github/scripts/rank_issues.ts`) to your
    repository.
 
-That's it! The action will run on the next scheduled time or you can trigger it manually from the "Actions" tab in your
-repository (look for "Rank Feature Requests").
+That's it! The action will run on the next scheduled time (daily at midnight UTC by default) or you can trigger it
+manually from the "Actions" tab in your repository (look for "Rank Feature Requests").
 
 ---
 
