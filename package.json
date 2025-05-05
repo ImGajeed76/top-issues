@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@octokit/rest": "^21.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.3",
+    "@types/bun": "latest"
+  },
+  "name": "top-issues",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}

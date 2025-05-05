@@ -1,0 +1,42 @@
+# Node dependencies
+node_modules/
+
+# Bun lockfile (optional, but often ignored for libraries/actions)
+bun.lockb
+
+# Local environment variables
+.env
+.env.*.local
+.env.local
+
+# TypeScript build output (if you were to compile locally)
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE / Editor directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Test coverage
+coverage/
+.nyc_output/
