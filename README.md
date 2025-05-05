@@ -1,4 +1,4 @@
-# Feature Rank Action ✨
+# Top Issues ✨
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) <!-- Optional: Add a license badge -->
 [![Uses GitHub Actions](https://img.shields.io/badge/Uses-GitHub%20Actions-blue?logo=githubactions&logoColor=white)](https://github.com/features/actions) <!-- Optional: Actions badge -->
