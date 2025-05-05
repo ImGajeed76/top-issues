@@ -32,6 +32,23 @@ The action will generate a file (e.g., `RANKED_FEATURES.md`) that looks somethin
 
 ➡️ [See RANKED_FEATURES.md](RANKED_FEATURES.md)
 
+Here's a static example of what the generated Markdown content looks like:
+
+
+### ✨ Top Feature Requests (your-owner/your-repo)
+
+*Updated: 2025-05-05T15:00:00.000Z*
+
+| Rank | 👍  | Feature Request                         | Issue                                                                          |
+| :--- | :-: | :-------------------------------------- | :----------------------------------------------------------------------------- |
+| 1    | 42  | Add dark mode support                   | [your-owner/your-repo#123](https://github.com/your-owner/your-repo/issues/123) |
+| 2    | 25  | Integrate with Service X                | [your-owner/your-repo#456](https://github.com/your-owner/your-repo/issues/456) |
+| 3    | 18  | Improve performance \| Optimize queries | [your-owner/your-repo#789](https://github.com/your-owner/your-repo/issues/789) |
+| 4    | 5   | Add option for exporting data           | [your-owner/your-repo#101](https://github.com/your-owner/your-repo/issues/101) |
+
+
+(Note: The actual file will contain the real data from your repository's issues.)
+
 ---
 
 ## 🚀 Installation & Setup
