@@ -44,6 +44,9 @@ Here's a static example of what the generated Markdown content looks like:
 | 2    | 25 | Integrate with Service X                | [your-owner/your-repo#456](https://github.com/your-owner/your-repo/issues/456) |
 | 3    | 18 | Improve performance \| Optimize queries | [your-owner/your-repo#789](https://github.com/your-owner/your-repo/issues/789) |
 | 4    | 5  | Add option for exporting data           | [your-owner/your-repo#101](https://github.com/your-owner/your-repo/issues/101) |
+---
+_Generated with ❤️ by [Top Issues Action](https://github.com/ImGajeed76/top-issues)_
+
 
 (Note: The actual file will contain the real data from your repository's issues.)
 

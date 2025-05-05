@@ -1,6 +1,6 @@
 // .github/scripts/rank_issues.ts
 
-import { Octokit } from "@octokit/rest";
+import {Octokit} from "@octokit/rest";
 import fs from "fs/promises"; // Use promises API for async file operations
 import path from "path";
 
@@ -53,7 +53,7 @@ function getRepoOwnerAndName(repoFullName: string): { owner: string; repo: strin
             `Invalid GITHUB_REPOSITORY format: ${repoFullName}. Expected 'owner/repo'.`,
         );
     }
-    return { owner, repo };
+    return {owner, repo};
 }
 
 function generateMarkdown(rankedIssues: RankedIssue[], repoFullName: string): string {
@@ -63,6 +63,8 @@ function generateMarkdown(rankedIssues: RankedIssue[], repoFullName: string): st
 
     if (rankedIssues.length === 0) {
         markdown += "_No open issues found with the specified label._\n";
+        markdown += "\n---\n"; // Optional: Add a separator
+        markdown += "_Generated with ❤️ by [Top Issues Action](https://github.com/ImGajeed76/top-issues)_";
         return markdown;
     }
 
@@ -76,6 +78,9 @@ function generateMarkdown(rankedIssues: RankedIssue[], repoFullName: string): st
         const issueLink = `[${repoFullName}#${issue.number}](${issue.url})`;
         markdown += `| ${rank} | ${issue.reactionCount} | ${escapedTitle} | ${issueLink} |\n`;
     });
+
+    markdown += "\n---\n"; // Optional: Add a separator
+    markdown += "_Generated with ❤️ by [Top Issues Action](https://github.com/ImGajeed76/top-issues)_";
 
     return markdown;
 }
@@ -91,12 +96,12 @@ async function main() {
         throw new Error("GITHUB_REPOSITORY environment variable is not set.");
     }
 
-    const { owner, repo } = getRepoOwnerAndName(repoFullName);
+    const {owner, repo} = getRepoOwnerAndName(repoFullName);
     console.log(`Repository: ${owner}/${repo}`);
     console.log(`Feature Label: ${featureLabel}`);
     console.log(`Output File: ${outputFile}`);
 
-    const octokit = new Octokit({ auth: githubToken });
+    const octokit = new Octokit({auth: githubToken});
 
     console.log("Fetching open issues with label...");
 
@@ -132,7 +137,7 @@ async function main() {
         // Ensure the output directory exists
         const outputDir = path.dirname(outputFile);
         if (outputDir !== ".") {
-            await fs.mkdir(outputDir, { recursive: true });
+            await fs.mkdir(outputDir, {recursive: true});
             console.log(`Ensured output directory exists: ${outputDir}`);
         }
 
