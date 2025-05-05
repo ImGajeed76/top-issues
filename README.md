@@ -30,8 +30,7 @@ This action runs on a schedule (or manually) to:
 
 The action will generate a file (e.g., `RANKED_FEATURES.md`) that looks something like this:
 
-➡️ [See EXAMPLE_RANKED_FEATURES.md](EXAMPLE_RANKED_FEATURES.md)
-
+➡️ [See RANKED_FEATURES.md](RANKED_FEATURES.md)
 
 ---
 
