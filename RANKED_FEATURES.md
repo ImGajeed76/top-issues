@@ -1,6 +1,6 @@
 ### ✨ Top Feature Requests (ImGajeed76/top-issues)
 
-*Updated: 2025-05-28T00:01:52.191Z*
+*Updated: 2025-05-29T00:01:39.149Z*
 
 | Rank | 👍 | Feature Request | Issue |
 | :--- | :-: | :-------------- | :---- |
