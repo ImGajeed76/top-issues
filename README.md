@@ -123,13 +123,4 @@ Contributions are welcome! Feel free to open an issue or submit a pull request t
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
 
 ---
-
-## Author
-
-**Oliver Seifert** - Software Engineer & Electronics Technician
-
-- Portfolio: [oseifert.ch](https://oseifert.ch)
-- GitHub: [@ImGajeed76](https://github.com/ImGajeed76)
-- Blog: [oseifert.ch/blog](https://oseifert.ch/blog)
-
-See my other projects at [oseifert.ch/projects](https://oseifert.ch/projects)
+Built with ❤️ by [Oliver Seifert](https://oseifert.ch)
